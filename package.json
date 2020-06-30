@@ -1,27 +1,37 @@
 {
-  "name": "mevn-stack-notes",
+  "name": "mehn-stack-published",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "MEHN app to store articles and status",
+  "main": "app.js",
   "scripts": {
-    "server": "nodemon server.js --ignore 'client/'",
-    "client": "npm run serve --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "node server.js",
-    "build": "npm install --prefix client && npm run build --prefix client "
+    "start": "cross-env NODE_ENV=production node app",
+    "dev": "cross-env NODE_ENV=development nodemon app"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewJBateman/mehn-stack-published.git"
+  },
+  "author": "MIT",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AndrewJBateman/mehn-stack-published/issues"
+  },
+  "homepage": "https://github.com/AndrewJBateman/mehn-stack-published#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
+    "connect-mongo": "^3.2.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.9.20"
+    "express-handlebars": "^4.0.4",
+    "express-session": "^1.17.1",
+    "method-override": "^3.0.0",
+    "moment": "^2.27.0",
+    "mongoose": "^5.9.20",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0"
   },
   "devDependencies": {
-    "concurrently": "^5.2.0",
+    "cross-env": "^7.0.2",
     "nodemon": "^2.0.4"
   }
 }
