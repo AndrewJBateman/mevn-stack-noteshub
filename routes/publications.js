@@ -23,8 +23,8 @@ router.post('/', ensureAuth, async (req, res) => {
   }
 });
 
-// @desc    Show all publications
-// @route   GET /publications
+// desc    Show all publications
+// route   GET /publications
 router.get('/', ensureAuth, async (req, res) => {
   try {
     const publications = await Publication.find({ status: 'public' })
@@ -41,8 +41,8 @@ router.get('/', ensureAuth, async (req, res) => {
   }
 });
 
-// @desc    Show single publication
-// @route   GET /publication/:id
+// desc    Show single publication
+// route   GET /publication/:id
 router.get('/:id', ensureAuth, async (req, res) => {
   try {
     let publication = await Publication.findById(req.params.id)
@@ -117,8 +117,8 @@ router.put('/:id', ensureAuth, async (req, res) => {
   }
 });
 
-// @desc    Delete publication
-// @route   DELETE /publications/:id
+// desc    Delete publication
+// route   DELETE /publications/:id
 router.delete('/:id', ensureAuth, async (req, res) => {
   try {
     let publication = await Publication.findById(req.params.id).lean();
@@ -139,8 +139,8 @@ router.delete('/:id', ensureAuth, async (req, res) => {
   }
 });
 
-// @desc    User publications
-// @route   GET /publications/user/:userId
+// desc    User publications
+// route   GET /publications/user/:userId
 router.get('/user/:userId', ensureAuth, async (req, res) => {
   try {
     const publications = await Publication.find({

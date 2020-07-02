@@ -30,7 +30,7 @@ app.use(express.json());
 app.use(
   methodOverride(function (req, res) {
     if (req.body && typeof req.body === 'object' && '_method' in req.body) {
-      // look in urlencoded POST bodies and delete it
+      // look in a urlencoded POST bodies and delete
       let method = req.body._method
       delete req.body._method
       return method
@@ -69,7 +69,7 @@ app.engine(
 );
 app.set('view engine', '.hbs');
 
-// Sessions
+// Session using mongo-store to save session
 app.use(
   session({
     secret: 'keyboard cat',
@@ -89,7 +89,6 @@ app.use(function (req, res, next) {
   next()
 })
 
-// Static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes

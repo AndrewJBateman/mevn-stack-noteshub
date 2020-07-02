@@ -1,6 +1,6 @@
 <h3>Edit Publication</h3>
 <div class="row">
-    <form action="/publications/{{story._id}}" method="POST" class="col s12">
+    <form action="/publications/{{publication._id}}" method="POST" class="col s12">
         <input type="hidden" name="_method" value="PUT">
         <div class="row">
             <div class="input-field">
@@ -12,7 +12,7 @@
         <div class="row">
             <div class="input-field">
                 <select id="status" name="status">
-                    {{#select story.status}}
+                    {{#select publication.status}}
                     <option value="public" selected>Public</option>
                     <option value="private">Private</option>
                     {{/select}}
@@ -23,8 +23,8 @@
 
         <div class="row">
             <div class="input-field">
-                <h5>What do you want to Publish:</h5>
-                <textarea id="body" name="body">{{story.body}}</textarea>
+                <h5>Edit Publication:</h5>
+                <textarea name="editor1">{{publication.body}}</textarea>
             </div>
         </div>
 

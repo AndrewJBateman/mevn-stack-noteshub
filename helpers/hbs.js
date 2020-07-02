@@ -17,15 +17,20 @@ module.exports = {
   stripTags: function (input) {
     return input.replace(/<(?:.|\n)*?>/gm, '');
   },
-  editIcon: function (publicationUser, loggedUser, publicationId, floating = true) {
+  editIcon: function (
+    publicationUser,
+    loggedUser,
+    publicationId,
+    floating = true
+  ) {
     if (publicationUser._id.toString() == loggedUser._id.toString()) {
       if (floating) {
-        return `<a href="/publications/edit/${publicationId}" class="btn-floating halfway-fab blue"><i class="fas fa-edit fa-small"></i></a>`
+        return `<a href="/publications/edit/${publicationId}" class="btn-floating halfway-fab blue"><i class="fas fa-edit fa-small"></i></a>`;
       } else {
-        return `<a href="/publications/edit/${publicationId}"><i class="fas fa-edit"></i></a>`
+        return `<a href="/publications/edit/${publicationId}"><i class="fas fa-edit"></i></a>`;
       }
     } else {
-      return ''
+      return '';
     }
   },
   select: function (selected, options) {
@@ -38,6 +43,6 @@ module.exports = {
       .replace(
         new RegExp('>' + selected + '</option>'),
         ' selected="selected"$&'
-      )
+      );
   },
 };

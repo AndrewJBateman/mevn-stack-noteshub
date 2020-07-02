@@ -1,15 +1,47 @@
+body {
+  background: rgba(235, 237, 238, 0.3);
+}
+
 p {
   margin: 10px 0 !important;
 }
 
+.container {
+  margin-top: 15px !important;
+  /* border: 1px solid red; */
+}
+
 .login-container {
-  width: 400px;
-  margin-top: 50px;
+  width: 600px;
   text-align: center;
+  margin: auto;
+}
+
+.top-card,
+.bottom-card {
+  height: 200px;
+  background: rgba(0, 128, 128, 0.568);
+  margin: -15px auto;
+}
+
+.top-card {
+  margin-top: 0.1px;
+}
+
+.bottom-card {
+  margin-bottom: 0.1px;
 }
 
 .fa-small {
   font-size: 16px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  color: grey !important;
+}
+
+.btn-floating {
+  margin: 10px !important;
 }
 
 .btn-float {

@@ -1,7 +1,7 @@
 {
   "name": "mehn-stack-published",
   "version": "1.0.0",
-  "description": "MEHN app to store articles and status",
+  "description": "MEHN app to store publications and their status",
   "main": "app.js",
   "scripts": {
     "start": "cross-env NODE_ENV=production node app",
